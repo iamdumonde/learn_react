@@ -13,13 +13,21 @@
 
       function Header({title}){
         console.log(title); //"React"
-        return <h1>{title}</h1>;
+        return <h1>{createTitle(title)}</h1>;
+      }
+
+      function createTitle(title){
+        if(title){
+          return title;
+        } else {
+          return 'Default title';
+        }
       }
 
       function HomePage(){
         return(
         <div>
-            <Header title="Welcome"/>
+            <Header title=""/>
             <Header title="World !"/>
         </div>
         );

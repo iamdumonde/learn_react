@@ -12,23 +12,14 @@
       const app = document.getElementById("app");
 
       function Header({title}){
-        console.log(title); //"React"
-        return <h1>{createTitle(title)}</h1>;
-      }
-
-      function createTitle(title){
-        if(title){
-          return title;
-        } else {
-          return 'Default title';
-        }
+        return <h1>{title ? title : 'Default title'}</h1>;
       }
 
       function HomePage(){
         return(
         <div>
-            <Header title=""/>
-            <Header title="World !"/>
+            <Header title="How are you body ?"/>
+            <Header title="What's up ?"/>
         </div>
         );
       }

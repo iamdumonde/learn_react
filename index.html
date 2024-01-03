@@ -18,10 +18,18 @@
       function HomePage(){
         const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
 
+        const arrays = ['Blue', 'RedPill', 'RedBull', 'GreenLight'];
+
         const [likes, setLikes] = React.useState(0);
+
+        const [notLikes, setNotLikes] = React.useState(0);
 
         function handleClick(){
           setLikes(likes + 1);
+        }
+
+        function notliked(){
+          setNotLikes(notLikes + 1);
         }
 
         return(
@@ -34,6 +42,16 @@
             </ul>
 
             <button onClick={handleClick}>Like ({likes})</button>
+
+
+            <Header title="Second Part of training !"/>
+            <ul>
+              {arrays.map((array) => (
+                <li key="array">{array}</li>
+              ))}
+            </ul>
+
+            <button onClick={notliked}>Not Like {notLikes}</button>
         </div>
         );
       }
